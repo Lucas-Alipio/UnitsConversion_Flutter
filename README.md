@@ -42,9 +42,9 @@ git clone https://github.com/Lucas-Alipio/UnitsConversion_Flutter
 ```
 flutter pub get
 ```
-> Executar 
+> Executar no navegador
 ```
-flutter run
+flutter run -d edge
 ```
 > Executando os testes
 ```
