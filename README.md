@@ -26,9 +26,13 @@ Aplicativo que realizará conversões de unidades, recebendo a unidade escolhida
 ```
 https://docs.flutter.dev/get-started/install
 ```
-> Configurando um editor (Android Studio)
+> Configurar um editor (Android Studio)
 ```
 https://docs.flutter.dev/get-started/editor?tab=androidstudio
+```
+> Criar um dispositivo virtual
+```
+https://developer.android.com/studio/run/managing-avds?hl=pt#createavd
 ```
 > Clonar o repositório
 ```
@@ -38,7 +42,7 @@ git clone https://github.com/Lucas-Alipio/UnitsConversion_Flutter
 ```
 flutter pub get
 ```
-> Executando 
+> Executar 
 ```
 flutter run
 ```
