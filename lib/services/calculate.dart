@@ -18,7 +18,7 @@ class Calculate {
     if (kelvin == true) kelvinControler.text = "";
     if (fahrenheit == true) fahrenheitControler.text = "";
     if (desfoca == true) {
-      WidgetsBinding.instance?.focusManager.primaryFocus?.unfocus();
+      WidgetsBinding.instance.focusManager.primaryFocus?.unfocus();
     }
   }
 
@@ -44,11 +44,12 @@ class Calculate {
       kelvin = double.parse(text);
 
       celsius = double.parse((kelvin - 273.15).toStringAsFixed(2));
-      celsiusControler.text = celsius.toString();
+      fahrenheit = double.parse((((kelvin - 273.15) / 5) * 9 + 32).toStringAsFixed(2));
 
-      fahrenheit =
-          double.parse((((kelvin - 273.15) / 5) * 9 + 32).toStringAsFixed(2));
-      fahrenheitControler.text = fahrenheit.toString();
+      if (celsiusControler != null && fahrenheitControler != null) {
+        celsiusControler.text = celsius.toString();
+        fahrenheitControler.text = fahrenheit.toString();
+      }
     }
   }
 
@@ -57,13 +58,13 @@ class Calculate {
       resetFields(false, celsius: true, kelvin: true, fahrenheit: false);
     else {
       fahrenheit = double.parse(text);
-
       celsius = double.parse(((fahrenheit - 32) * 5 / 9).toStringAsFixed(2));
-      celsiusControler.text = celsius.toString();
+      kelvin = double.parse((((fahrenheit - 32) / 9) * 5 + 273.15).toStringAsFixed(2));
 
-      kelvin = double.parse(
-          (((fahrenheit - 32) / 9) * 5 + 273.15).toStringAsFixed(2));
-      kelvinControler.text = kelvin.toString();
+      if (celsiusControler != null && kelvinControler != null) {
+        celsiusControler.text = celsius.toString();
+        kelvinControler.text = kelvin.toString();
+      }
     }
   }
 }
