@@ -30,6 +30,22 @@ https://docs.flutter.dev/get-started/install
 ```
 https://docs.flutter.dev/get-started/editor?tab=androidstudio
 ```
+> Clonar o repositório
+```
+git clone https://github.com/Lucas-Alipio/UnitsConversion_Flutter
+```
+> Baixar as dependências
+```
+flutter pub get
+```
+> Executando 
+```
+flutter run
+```
+> Executando os testes
+```
+flutter test
+```
 > Mais Informações
 ```
 https://docs.flutter.dev/get-started/learn-more
