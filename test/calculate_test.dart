@@ -25,4 +25,12 @@ void main() {
 
     expect(calculate.celsius, 18.33);
   });
+
+  test('Tests kelvin to celcius conversion', () {
+    Calculate calculate = Calculate();
+
+    calculate.kelvinChanged("0");
+
+    expect(calculate.celsius, -273.15);
+  });
 }
