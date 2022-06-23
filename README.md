@@ -1,7 +1,6 @@
 # Conversão de Unidades
 
-![Flutter CI](https://github.com/Lucas-Alipio/UnitsConversion_Flutter
-/actions/workflows/dart.yml/badge.svg)
+![Flutter CI](https://github.com/Lucas-Alipio/UnitsConversion_Flutter/actions/workflows/dart.yml/badge.svg)
 
 ## Sobre o Projeto
 Aplicativo que realizará conversões de unidades, recebendo a unidade escolhida pelo usuário e então a convertendo-a para outras.<br>
