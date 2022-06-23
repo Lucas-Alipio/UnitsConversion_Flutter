@@ -7,7 +7,7 @@ class Calculate {
 
   var celsiusControler;
   var kelvinControler;
-  var fahrenheitControler;
+  var fahrenheitControler; 
 
   Calculate(
       {this.celsiusControler, this.kelvinControler, this.fahrenheitControler});
