@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class Calculate {
-
   double celsius = 0;
   double kelvin = 0;
   double fahrenheit = 0;
 
   var celsiusControler;
-  var kelvinControler ;
+  var kelvinControler;
   var fahrenheitControler;
 
-  Calculate({this.celsiusControler, this.kelvinControler, this.fahrenheitControler});
+  Calculate(
+      {this.celsiusControler, this.kelvinControler, this.fahrenheitControler});
 
   void resetFields(bool desfoca,
       {required bool celsius, required bool kelvin, required bool fahrenheit}) {
@@ -27,12 +27,13 @@ class Calculate {
       resetFields(false, celsius: false, kelvin: true, fahrenheit: true);
     else {
       celsius = double.parse(text);
-
       kelvin = double.parse((celsius + 273.15).toStringAsFixed(2));
-      kelvinControler.text = kelvin.toString();
-
       fahrenheit = double.parse((celsius * 9 / 5 + 32).toStringAsFixed(2));
-      fahrenheitControler.text = fahrenheit.toString();
+
+      if (kelvinControler != null && fahrenheitControler != null) {
+        kelvinControler.text = kelvin.toString();
+        fahrenheitControler.text = fahrenheit.toString();
+      }
     }
   }
 
@@ -45,7 +46,8 @@ class Calculate {
       celsius = double.parse((kelvin - 273.15).toStringAsFixed(2));
       celsiusControler.text = celsius.toString();
 
-      fahrenheit = double.parse((((kelvin - 273.15) / 5) * 9 + 32).toStringAsFixed(2));
+      fahrenheit =
+          double.parse((((kelvin - 273.15) / 5) * 9 + 32).toStringAsFixed(2));
       fahrenheitControler.text = fahrenheit.toString();
     }
   }
@@ -55,13 +57,13 @@ class Calculate {
       resetFields(false, celsius: true, kelvin: true, fahrenheit: false);
     else {
       fahrenheit = double.parse(text);
-      
+
       celsius = double.parse(((fahrenheit - 32) * 5 / 9).toStringAsFixed(2));
       celsiusControler.text = celsius.toString();
 
-      kelvin = double.parse((((fahrenheit - 32) / 9) * 5 + 273.15).toStringAsFixed(2));
+      kelvin = double.parse(
+          (((fahrenheit - 32) / 9) * 5 + 273.15).toStringAsFixed(2));
       kelvinControler.text = kelvin.toString();
-      
     }
   }
 }
