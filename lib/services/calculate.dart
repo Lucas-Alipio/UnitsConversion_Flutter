@@ -27,8 +27,12 @@ class Calculate {
       resetFields(false, celsius: false, kelvin: true, fahrenheit: true);
     else {
       celsius = double.parse(text);
-      kelvinControler.text = (celsius + 273.15).toStringAsFixed(2);
-      fahrenheitControler.text = (celsius * 9 / 5 + 32).toStringAsFixed(2);
+
+      kelvin = double.parse((celsius + 273.15).toStringAsFixed(2));
+      kelvinControler.text = kelvin.toString();
+
+      fahrenheit = double.parse((celsius * 9 / 5 + 32).toStringAsFixed(2));
+      fahrenheitControler.text = fahrenheit.toString();
     }
   }
 
@@ -37,9 +41,12 @@ class Calculate {
       resetFields(false, celsius: true, kelvin: false, fahrenheit: true);
     else {
       kelvin = double.parse(text);
-      celsiusControler.text = (kelvin - 273.15).toStringAsFixed(2);
-      fahrenheitControler.text =
-          (((kelvin - 273.15) / 5) * 9 + 32).toStringAsFixed(2);
+
+      celsius = double.parse((kelvin - 273.15).toStringAsFixed(2));
+      celsiusControler.text = celsius.toString();
+
+      fahrenheit = double.parse((((kelvin - 273.15) / 5) * 9 + 32).toStringAsFixed(2));
+      fahrenheitControler.text = fahrenheit.toString();
     }
   }
 
@@ -48,9 +55,13 @@ class Calculate {
       resetFields(false, celsius: true, kelvin: true, fahrenheit: false);
     else {
       fahrenheit = double.parse(text);
-      celsiusControler.text = ((fahrenheit - 32) * 5 / 9).toStringAsFixed(2);
-      kelvinControler.text =
-          (((fahrenheit - 32) / 9) * 5 + 273.15).toStringAsFixed(2);
+      
+      celsius = double.parse(((fahrenheit - 32) * 5 / 9).toStringAsFixed(2));
+      celsiusControler.text = celsius.toString();
+
+      kelvin = double.parse((((fahrenheit - 32) / 9) * 5 + 273.15).toStringAsFixed(2));
+      kelvinControler.text = kelvin.toString();
+      
     }
   }
 }

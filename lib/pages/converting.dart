@@ -25,8 +25,13 @@ class _TemperaturePageState extends State<TemperaturePage> {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: const Text("Converter Temperatura",
-              style: TextStyle(color: Colors.black)),
+          title: const Text(
+            "Converter Temperatura",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+            textAlign: TextAlign.left,
+          ),
           backgroundColor: Colors.lightBlue,
           centerTitle: true,
           actions: [
@@ -48,7 +53,7 @@ class _TemperaturePageState extends State<TemperaturePage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Icon(
-                Icons.rotate_right,
+                Icons.thermostat_outlined,
                 size: 150, 
                 color: Colors.redAccent
               ),
