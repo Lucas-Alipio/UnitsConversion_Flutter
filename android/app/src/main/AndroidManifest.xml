@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.inatel.c214.unitsconversion">
    <application
-        android:label="unitsconversion"
+        android:label="Units Conversion"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/temperature_control">
         <activity
             android:name=".MainActivity"
             android:exported="true"
